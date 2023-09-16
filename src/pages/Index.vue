@@ -20,6 +20,7 @@ export default {
   },
   methods: {
     send () {
+      // Send message
       // chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
       //   var activeTab = tabs[0];
       //   chrome.tabs.sendMessage(activeTab.id, { message: "Send message từ extension." });
