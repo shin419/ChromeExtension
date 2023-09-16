@@ -30,9 +30,11 @@
     ]
   }],
   "permissions": [
+    "*://*/*",
     "storage",
     "tabs",
-    "activeTab"
+    "activeTab",
+    "cookies"
   ],
   "web_accessible_resources": [
     "www/*",

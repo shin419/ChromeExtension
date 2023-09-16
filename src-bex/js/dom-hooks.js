@@ -1,10 +1,9 @@
-// Hooks added here have a bridge allowing communication between the Web Page and the BEX Content Script.
-// More info: https://quasar.dev/quasar-cli/developing-browser-extensions/dom-hooks
+// Chạy dưới background của web
 
-export default function attachDomHooks (/* bridge */) {
-  /*
+export default function attachDomHooks (bridge) {
+  console.log("start send message.")
   bridge.send('message.to.quasar', {
     worked: true
   })
-  */
+  console.log("end send message.")
 }

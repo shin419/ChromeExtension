@@ -39,6 +39,10 @@ export default function attachBackgroundHooks (bridge /* , allActiveConnections 
     })
   })
 
+  bridge.on('message.to.quasar', event => {
+    console.log("event: ", event)
+  })
+
   /*
   // EXAMPLES
   // Listen to a message from the client
