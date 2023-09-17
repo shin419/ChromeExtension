@@ -1,10 +1,8 @@
-// Hooks added here have a bridge allowing communication between the BEX Background Script and the BEX Content Script.
-// Note: Events sent from this background script using `bridge.send` can be `listen`'d for by all client BEX bridges for this BEX
-
-// More info: https://quasar.dev/quasar-cli/developing-browser-extensions/background-hooks
-console.log("222222222")
+// Ngoài này thì chỉ cần cài ext vô là chạy rồi
+// To do ...
 export default function attachBackgroundHooks (bridge /* , allActiveConnections */) {
-  console.log("222222222------")
+  // Trong này thì F5 mới chạy
+  // To do ...
 
   bridge.on('storage.get', event => {
     const payload = event.data
@@ -37,10 +35,6 @@ export default function attachBackgroundHooks (bridge /* , allActiveConnections 
     chrome.storage.local.remove(payload.key, () => {
       bridge.send(event.eventResponseKey, payload.data)
     })
-  })
-
-  bridge.on('message.to.quasar', event => {
-    console.log("event: ", event)
   })
 
   /*

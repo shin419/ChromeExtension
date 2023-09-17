@@ -1,6 +1,9 @@
-// Background code goes here
+// Cũng cài vô là đã chạy rồi
+// To do ...
+
 chrome.browserAction.onClicked.addListener((/* tab */) => {
-  console.log("111111-----")
+  // Trong này thì chưa biết chắc do từng event để check ??
+
   // Opens our extension in a new browser window.
   // Only if a popup isn't defined in the manifest.
   chrome.tabs.create({
@@ -9,4 +12,3 @@ chrome.browserAction.onClicked.addListener((/* tab */) => {
     // Tab opened.
   })
 })
-console.log("111111")

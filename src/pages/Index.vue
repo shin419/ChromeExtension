@@ -28,10 +28,10 @@ export default {
       // });
 
 
-      // lấy tất cả cookies
-      chrome.cookies.getAll({ url: "https://www.facebook.com/" }, (cookies) => {
-        console.log(cookies, "cookies nè 11: ")
-      });
+      // // lấy tất cả cookies
+      // chrome.cookies.getAll({ url: "https://www.facebook.com/" }, (cookies) => {
+      //   console.log(cookies, "cookies nè 11: ")
+      // });
 
       // lấy 1 cookies 
       // chrome.cookies.get({ url: "https://www.facebook.com/", name: "datr"}, (cookies) => {
@@ -40,8 +40,14 @@ export default {
     }
   },
   created() {
-    chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-      console.log("Nhận lại message từ web thành công. nhận từ content-script.js");
+    // Nhận message từ web
+    // chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    //   console.log("Nhận lại message từ web thành công. nhận từ content-script.js");
+    // });
+
+    // lấy tất cả cookies
+    chrome.cookies.getAll({ url: "https://www.facebook.com/" }, (cookies) => {
+      console.log(cookies, "cookies nè 11: ")
     });
   }
 }
